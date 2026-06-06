@@ -1,0 +1,23 @@
+divida = float(input("Valor da dívida: "))
+
+print("\nValor Dívida | Juros | Parcelas | Valor Parcela")
+
+juros = 0
+total = divida + juros
+print(f"R$ {total:.2f} | R$ {juros:.2f} | 1 | R$ {total/1:.2f}")
+
+juros = divida * 0.10
+total = divida + juros
+print(f"R$ {total:.2f} | R$ {juros:.2f} | 3 | R$ {total/3:.2f}")
+
+juros = divida * 0.15
+total = divida + juros
+print(f"R$ {total:.2f} | R$ {juros:.2f} | 6 | R$ {total/6:.2f}")
+
+juros = divida * 0.20
+total = divida + juros
+print(f"R$ {total:.2f} | R$ {juros:.2f} | 9 | R$ {total/9:.2f}")
+
+juros = divida * 0.25
+total = divida + juros
+print(f"R$ {total:.2f} | R$ {juros:.2f} | 12 | R$ {total/12:.2f}")
