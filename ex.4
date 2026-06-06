@@ -1,0 +1,53 @@
+votos_jose = 0
+votos_joao = 0
+votos_maria = 0
+votos_ana = 0
+votos_nulos = 0
+votos_brancos = 0
+total_votos = 0
+
+print("1 - José\n2 - João\n3 - Maria\n4 - Ana")
+print("5 - Voto Nulo\n6 - Voto em Branco")
+print("\n0 - Encerrar")
+
+
+while True:
+    voto = int(input("\nInforme o código do voto: "))
+    
+    if voto == 0:
+        break
+    
+    if voto == 1:
+        votos_jose += 1
+    elif voto == 2:
+        votos_joao += 1
+    elif voto == 3:
+        votos_maria += 1
+    elif voto == 4:
+        votos_ana += 1
+    elif voto == 5:
+        votos_nulos += 1
+    elif voto == 6:
+        votos_brancos += 1
+    else:
+        print("\nCódigo inválido! Voto não computado.")
+        continue 
+        
+    total_votos += 1
+    
+if total_votos > 0:
+    perc_nulos = (votos_nulos / total_votos) * 100
+    perc_brancos = (votos_brancos / total_votos) * 100
+else:
+    perc_nulos = perc_brancos = 0
+
+print(f"\nJosé: {votos_jose} votos")
+print(f"\nJoão: {votos_joao} votos")
+print(f"\nMaria: {votos_maria} votos")
+print(f"\nAna: {votos_ana} votos")
+print(f"\nVotos Nulos: {votos_nulos}")
+print(f"\nVotos em Branco: {votos_brancos}")
+
+print(f"Total de votos: {total_votos}")
+print(f"Percentagem de Nulos: {perc_nulos:.2f}%")
+print(f"Percentagem de Brancos: {perc_brancos:.2f}%")
