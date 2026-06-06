@@ -1,0 +1,45 @@
+total_alunos = 0
+soma_notas = 0
+maior_acerto = 0
+menor_acerto = 10  
+
+gabarito = []
+for i in range(1, 11):
+    resposta_correta = input(f"Gabarito da questão {i}: ").upper()
+    gabarito.append(resposta_correta)
+
+while True:
+    print(f"\n4ALUNO Nº {total_alunos + 1}")
+    acertos_atual = 0
+    
+    for i in range(10):
+        resposta_aluno = input(f"Resposta da questão {i+1}: ").upper()
+        if resposta_aluno == gabarito[i]:
+            acertos_atual += 1
+
+    total_alunos += 1
+    soma_notas += acertos_atual
+    
+    if acertos_atual > maior_acerto:
+        maior_acerto = acertos_atual
+    
+    if acertos_atual < menor_acerto:
+        menor_acerto = acertos_atual
+        
+    print(f"Nota do aluno: {acertos_atual}")
+
+    continuar = input("\nOutro aluno utilizará o sistema? (Sim ou Não): ").upper()
+    if continuar != 'Sim':
+        break
+    
+if total_alunos > 0:
+    media_turma = soma_notas / total_alunos
+    print("\n" + "="*30)
+    print("      RELATÓRIO FINAL")
+    print("="*30)
+    print(f"Maior acerto: {maior_acerto}")
+    print(f"Menor acerto: {menor_acerto}")
+    print(f"Total de alunos: {total_alunos}")
+    print(f"Média da turma: {media_turma:.2f}")
+else:
+    print("Nenhum dado foi registrado.")
