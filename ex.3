@@ -1,0 +1,48 @@
+total_geral = 0
+
+print("Cardápio:")
+print("100: Cachorro Quente - R$ 1,20")
+print("101: Bauru Simples   - R$ 1,30")
+print("102: Bauru com ovo   - R$ 1,50")
+print("103: Hambúrguer      - R$ 1,20")
+print("104: Cheeseburguer   - R$ 1,30")
+print("105: Refrigerante    - R$ 1,00")
+print("0:   Encerrar Pedido")
+print("-" * 30)
+
+while True:
+    codigo = int(input("\nDigite o número do item (ou 0 para encerrar): "))
+    
+    if codigo == 0:
+        break
+        
+    quantidade = int(input("Insira a quantidade: "))
+
+    if codigo == 100:
+        preco_unitario = 1.20
+        item = "Cachorro Quente"
+    elif codigo == 101:
+        preco_unitario = 1.30
+        item = "Bauru Simples"
+    elif codigo == 102:
+        preco_unitario = 1.50
+        item = "Bauru com ovo"
+    elif codigo == 103:
+        preco_unitario = 1.20
+        item = "Hambúrguer"
+    elif codigo == 104:
+        preco_unitario = 1.30
+        item = "Cheeseburguer"
+    elif codigo == 105:
+        preco_unitario = 1.00
+        item = "Refrigerante"
+    else:
+        print("Código inválido! Tente novamente.")
+        continue
+
+    valor_item = preco_unitario * quantidade
+    total_geral += valor_item
+    
+    print(f"total {item}: R$ {valor_item:.2f}")
+
+print(f"\nValor total do pedido: R$ {total_geral:.2f}")
