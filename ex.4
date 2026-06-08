@@ -12,7 +12,7 @@ print("\n0 - Encerrar")
 
 
 while True:
-    voto = int(input("\nInforme o código do voto: "))
+    voto = int(input("\nInsira o código do voto: "))
     
     if voto == 0:
         break
@@ -30,9 +30,8 @@ while True:
     elif voto == 6:
         votos_brancos += 1
     else:
-        print("\nCódigo inválido! Voto não computado.")
-        continue 
-        
+        print("\nCódigo inválido!.")
+     
     total_votos += 1
     
 if total_votos > 0:
