@@ -1,0 +1,6 @@
+text = input('Insira um texto: ')
+
+
+invert = text[::-1]
+
+print(invert)
