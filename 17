@@ -1,0 +1,12 @@
+matriz = [[1, 2, 3, 4, 5, 6, 7, 8, 9]]
+num_linhas = len(matriz)
+coluna = len(matriz[0])
+Tamanho = True
+for linha in matriz:
+    if len(linha) != coluna:
+        consistente = False
+        break
+Mquadrada = Tamanho and (num_linhas == coluna)
+
+print(f"Linhas com mesmo tamanho? {Tamanho}")
+print(f"Matriz quadrada? {Mquadrada}")
