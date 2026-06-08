@@ -1,0 +1,12 @@
+linhas = int(input("linhas: "))
+colunas = int(input("Colunas: "))
+matriz = []
+for i in range(linhas):
+    linha = []
+    for x in range(colunas):
+        result = i * x
+        linha.append(result)
+    matriz.append(linha)
+print("\nMatriz Gerada (i * x):")
+for linha in matriz:
+    print(linha)
