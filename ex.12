@@ -1,0 +1,17 @@
+x = int(input("Matriz quadrada: "))
+matriz = []
+
+for i in range(x):
+    linha = []
+    for y in range(x):
+        num = int(input(f"Elemento [{i}][j]: "))
+        linha.append(num)
+    matriz.append(linha)
+soma_principal = 0
+soma_secundaria = 0
+for i in range(x):
+    soma_principal += matriz[i][i]
+    soma_secundaria += matriz[i][x - 1 - i]
+
+print(f"\nSoma da Diagonal Principal: {soma_principal}")
+print(f"Soma da Diagonal Secundária: {soma_secundaria}")
