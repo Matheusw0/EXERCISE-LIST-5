@@ -28,10 +28,11 @@ while True:
         
     print(f"Nota do aluno: {acertos_atual}")
 
-    continuar = input("\nOutro aluno utilizará o sistema? (Sim ou Não): ").upper()
-    if continuar != 'Sim':
+    continuar = input("\nOutro aluno utilizará o sistema? (S ou N): ").upper()
+    if continuar == 'N':
         break
-    
+    else:
+        continue
 if total_alunos > 0:
     media_turma = soma_notas / total_alunos
     print("\n" + "-"*30)
@@ -41,4 +42,4 @@ if total_alunos > 0:
     print(f"Total de alunos: {total_alunos}")
     print(f"Média da turma: {media_turma:.2f}")
 else:
-    print("Nenhum dado foi registrado.")
+    print("Nenhum dado.")
