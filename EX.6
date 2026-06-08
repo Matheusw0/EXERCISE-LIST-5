@@ -1,0 +1,27 @@
+while True:
+    nome = input("Atleta: ")
+    if nome == "":
+        break
+
+    saltos = []
+    for i in range(5):
+        salto = float(input(f"Salto {i+1}: "))
+        saltos.append(salto)
+
+    melhor = max(saltos)
+    pior = min(saltos)
+    media = (sum(saltos) - melhor - pior) / 3
+
+    print(f"\nAtleta: {nome}")
+    print(f"Primeiro Salto: {saltos[0]} m")
+    print(f"Segundo Salto: {saltos[1]} m")
+    print(f"Terceiro Salto: {saltos[2]} m")
+    print(f"Quarto Salto: {saltos[3]} m")
+    print(f"Quinto Salto: {saltos[4]} m")
+    
+    print(f"\nMelhor salto: {melhor} m")
+    print(f"Pior salto: {pior} m")
+    print(f"Média dos demais saltos: {media:.1f} m")
+    
+    print("\nResultado final:")
+    print(f"{nome}: {media:.1f} m\n")
